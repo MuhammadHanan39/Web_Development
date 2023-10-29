@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <script>
+
+        function ajaxCall(){
+
+
+            var request= new XMLHttpRequest();
+
+            request.open("GET","/about.html");
+
+            request.onreadystatechange= function (){
+
+                if(request.readyState==4 && request.status==200){
+
+                    console.log(request.responseText);
+                    document.getElementById('container').innerHTML=request.responseText;
+
+
+
+
+                }
+            };
+
+
+            
+
+
+
+
+
+
+            request.send();
+
+
+
+
+
+        }
+
+
+
+
+    </script>
 </head>
 <body>
     <h1>Welcome to Home Page</h1>
     <h2>Learning the Ajax</h2>
-    <h1><a href="/about.html">About Page</a></h1>
+    <button onclick="ajaxCall()">About Page </button>
+    <div id="container">
+
+    </div>
 </body>
 </html>

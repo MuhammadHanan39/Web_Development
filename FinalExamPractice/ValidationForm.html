@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <label for="cnic">Enter CNIC</label>
+    <input type="text" id="cnic">
+    <button onclick="checkValidation()">check Validation</button>
+    <span id="res"></span>
+
+
+    <script>
+
+        function checkValidation(){
+
+            const cnic=document.getElementById("cnic").value;
+            const regex= /^[0-9]{5}-[0-9]{7}-[0-9]{1}$/;
+
+            if(regex.test(cnic)){
+                document.getElementById("res").innerHTML='Validation Succesfull';
+            }else{
+                document.getElementById('res').innerHTML="Validation Unsuccessful . Please enter a Cnic Number in this format XXXXX-XXXXXXX-X";
+            }
+
+
+
+
+        }
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

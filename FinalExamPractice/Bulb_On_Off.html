@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+    <img src="/FinalExamPractice/bulb off.PNG" alt="" id="bulbImg">
+    <!-- <img src="/FinalExamPractice/bulb on.PNG" hidden alt=""> -->
+    </div>
+    <button onclick="bulbOn()" id="on">On</button>
+    <button onclick="bulbOff()" id="off">Off</button>
+
+
+
+
+
+    <script>
+        function bulbOn(){
+            let imgDisplay= document.getElementById('bulbImg');
+            imgDisplay.src='/FinalExamPractice/bulb on.PNG';
+        }
+        function bulbOff(){
+            let imgDisplay= document.getElementById('bulbImg');
+            imgDisplay.src='/FinalExamPractice/bulb off.PNG';
+        }
+    </script>
+</body>
+</html>

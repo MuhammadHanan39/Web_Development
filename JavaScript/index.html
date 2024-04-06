@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Javascript</title>
+</head>
+<body>
+    <h1 id="n">Hanan Shaikh</h1>
+    <p id="para">This is a paragraph</p>
+    <span>Hello span</span>
+
+
+    <script>
+
+        let name ="Hanan";
+        console.log("variable"+name);
+
+        function sum(a,b){
+            return a+b;
+        }
+
+        console.log("Sum of 2 numbers is (Working with function)"+sum(4,5));
+
+
+        let names = ["Hanan", "Haseeb","Israr","Izhar"]
+        console.log("Array: "+names);
+
+
+        let obj={
+            name:"Hanan Shaikh",
+            caste:"Shaikh",
+            profession:"Student"
+        }
+
+        console.log("Object = " + obj.name +" "+ obj.caste+" "+obj.profession );
+
+        document.getElementById("n").innerHTML ="Haseeb";
+
+        document.getElementById("para").addEventListener("click", function clickEvent(){
+            alert("Hello Paragraph");
+        }
+        )
+    </script>
+</body>
+</html>
